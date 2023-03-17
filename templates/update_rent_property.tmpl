@@ -1,0 +1,32 @@
+{{template "header.tmpl" }}
+<!-- Submit Property Section -->
+	<section class="submit-property-section">
+		<div class="auto-container">		
+			<!-- Submit Property Section -->
+			<div class="dashboard-property-section">
+				<h2>Basic Information</h2>
+				<!-- Property Search Form -->
+				<div class="property-search-form">
+					<form method="post" action="/update_property_2" enctype="multipart/form-data">
+						<div class="row">
+							<!-- Form Group -->
+							<div class="form-group col-lg-4 col-md-4 col-sm-12">
+								<label>Property Name</label>
+								<input type="text" name="property_name" placeholder="Property Name" value="{{.property_name}}" required>
+							</div>
+                            
+							<!-- Form Group -->
+							<div class="form-group col-lg-12 col-md-12 col-sm-12">
+								<button type="submit" class="theme-btn btn-style-two"><span class="txt">Submit Now</span></button>
+							</div>
+							
+						</div>
+					</form>
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Submit Property Section -->
+{{template "footer.tmpl" }}

@@ -1,0 +1,432 @@
+		{{template "header.tmpl" }}
+		<!-- Search Home Section -->
+	<section class="search-home-section">
+		<div class="auto-container">
+			<div class="property-search-tabs tabs-box">
+				<div class="tabs-content">
+					<!--Tab / Active Tab-->
+					<div class="sec-title centered">
+					<div class="separator"></div>
+					<h1>Houses for Rent</h1>
+				</div>
+					<div class="tab active-tab" id="sale">
+						<div class="property-search-form">
+							<form method="post" action="/rent_property">
+								<div class="row">
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+											<label>Name</label>
+										<input type="text" name="name" placeholder="Address" value="{{.name}}" required>
+									</div>
+									
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>City</label>
+										<select class="custom-select-box" name="city" value{{.city}}>
+											<option nam="city">Any</option>
+											<option nam="city">New York</option>
+											<option nam="city">Los Angeles</option>
+											<option nam="city">Chicago</option>
+											<option nam="city">Houston</option>
+										</select>
+									</div>
+
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>search by property id</label>
+										<input type="text" name="property_id" value="{{.property_id}}" placeholder="Search ID" required>
+									</div>
+
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>search by Address</label>
+										<input type="text" name="address" value="{{.address}}" placeholder="Address" required>
+									</div>
+									
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>Bedroom</label>
+										<select class="custom-select-box" name="bedroom" value="bedroom">
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+										</select>
+									</div>
+									
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>Washroom</label>
+										<select class="custom-select-box" name="washroom" value="washroom">
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+										</select>
+									</div>
+									
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>Car Space</label>
+										<select class="custom-select-box" name="carspace" value="carspace">
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+										</select>
+									</div>
+									
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>Servant Quarter</label>
+										<select class="custom-select-box" name="servant_quarter" value="servant_quarter">
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+										</select>
+									</div>
+									
+									<!-- Form Group -->
+									<div class="form-group col-lg-6 col-md-6 col-sm-12">
+										<div class="range-slider-one clearfix">
+											<label>Price Filter</label>
+											<div class="price-range-slider"></div>
+											<div class="input"><input type="text" class="price-amount" name="price"  readonly></div>
+											<div class="title">NG Naira</div>
+										</div>
+									</div>
+
+									<!-- Form Group -->
+									<div class="form-group col-lg-12 col-md-12 col-sm-12">
+										<button type="submit" class="theme-btn btn-style-two"><span class="txt">Search Now</span></button>
+										<br />
+											<h2 class="text-center">{{.errorMessage}}</h2>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Search Home Section -->
+		<!-- Properties Page Section -->
+		<section class="properties-page-section">
+			<div class="auto-container">
+				<div class="row clearfix">
+					<!-- Property Block --->
+					{{ range .properties}}
+					{{ if eq .Status "For Rent" }}
+					<div class="property-block col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="upper-box clearfix">
+								<div class="pull-left">
+									<div class="price">#{{.Price}}</div>
+								</div>
+								<div class="pull-right">
+									<a class="read-more" href="/rent_property{{.ID}}">Read More <span
+											class="fas fa-angle-double-right"></span></a>
+								</div>
+							</div>
+							<div class="image">
+								<span class="featured">featured</span>
+								<a href="/rent_property_{{.ID}}"><img src="assets/images/resource/{{(index .Images 0)}}" alt="" class="resize" /></a>
+								<div class="overlay-box">
+									<li>House For {{.Status}}</li>
+									<li>{{.Availability}}</li>
+								</div>
+							</div>
+							<div class="lower-content">
+								<h3><a href="/rent_property_{{.ID}}">{{.PropertyName}}</a></h3>
+								<ul class="social-icon-one">
+									<li><a href="https://www.facebook.com/profile.php?id=100081599105741&mibextid=LQQJ4d"><span class="fa fa-edit"></span></a></li>
+									<li><a href="/delete_property_{{.ID}}"><span class="fa fa-trash"></span></a></li>
+								</ul>
+								<h3><a href="/rent_property_{{.ID}}">
+								<div class="text">{{.Description}}</div>
+								<ul class="property-info clearfix">
+									<li><i class="flaticon-design-tool"></i>{{.State}} State</li>
+									<li><i class="flaticon-bed"></i> {{.Bedroom}} Bedrooms</li>
+									<li><i class="flaticon-garage-1"></i> {{.CarSpace}} Garage</li>
+									<li><i class="flaticon-shower"></i> {{.Bathroom}} Bathroom</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					{{end}}
+					{{ end }}
+				</div>
+
+				<!-- Styled Pagination 
+				<div class="styled-pagination text-center">
+					<ul class="inner-container clearfix">
+						<li class="prev"><a href="#" class="active"><i class="flaticon-left-arrow"></i> Prev</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li class="active"><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li class="next"><a href="#" class="active">Next <i class="flaticon-right-arrow-1"></i></a></li>
+					</ul>
+				</div>
+				-->
+			</div>
+		</section>
+		<!-- End Team Section -->
+
+{{template "footer.tmpl"}}
+
+<!-- Form Group 
+							<div class="form-group col-lg-4 col-md-4 col-sm-12">
+								<label>City</label>
+								<input type="text" name="city" placeholder="City" value="{{.city}}" required>
+							</div>
+                            <!-- Form Group -->
+							<div class="form-group col-lg-3 col-md-6 col-sm-12">
+								<label>Bedrooms</label>
+								<select class="custom-select-box"  name="bedroom" value{{.bedroom}}>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+								</select>
+							</div>
+                            <!-- Form Group -->
+							<div class="form-group col-lg-4 col-md-4 col-sm-12">
+								<label>Description</label>
+								<input type="mail" name="description" placeholder="Description" value="{{.description}}" required>
+							</div>
+
+                            <!-- Form Group -->
+							<div class="form-group col-lg-4 col-md-4 col-sm-12">
+								<label>Agent</label>
+								<input type="text" name="agent" placeholder="Agent" value="{{.agent}}" required>
+							</div>
+							
+                             <!-- Form Group -->
+							<div class="form-group col-lg-4 col-md-4 col-sm-12">
+								<label>Video</label>
+								<input type="text" name="video" placeholder="Video" value="{{.video}}" required>
+							</div>
+
+							<!-- Form Group -->
+							<div class="form-group col-lg-4 col-md-4 col-sm-12">
+								<label>Category</label>
+								<input type="text" name="category" placeholder="Category" value="{{.category}}" required>
+							</div>
+                             <!-- Form Group -->
+							<div class="form-group col-lg-4 col-md-4 col-sm-12">
+								<label>Price</label>
+								<input type="number" name="price" placeholder="Price" value="{{.price}}" required>
+							</div>
+
+							<!-- Form Group -->
+							<div class="form-group col-lg-3 col-md-6 col-sm-12">
+								<label>Property Type</label>
+								<select class="custom-select-box" name="property_type" value{{.property_type}}>
+									<option>Apartment</option>
+									<option>Commercial</option>
+									<option>House</option>
+									<option>Villa</option>
+									<option>Residential</option>
+								</select>
+							</div>
+							<!-- Form Group -->
+							<div class="form-group col-lg-3 col-md-6 col-sm-12">
+								<label>Status</label>
+								<select class="custom-select-box"  name="status" value{{.status}}>
+									<option>For Sale</option>
+								</select>
+							</div>
+							<!-- Form Group -->
+							<div class="form-group col-lg-3 col-md-6 col-sm-12">
+								<label>Car Space</label>
+								<select class="custom-select-box" name="car_space" value{{.car_space}}>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+								</select>
+							</div>
+							
+							<!-- Form Group -->
+							<div class="form-group col-lg-3 col-md-6 col-sm-12">
+								<label>Washroom</label>
+								<select class="custom-select-box" name="washroom" value{{.washroom}}>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+								</select>
+							</div>
+
+							<!-- Form Group -->
+							<div class="form-group col-lg-3 col-md-6 col-sm-12">
+								<label>Bath Room</label>
+								<select class="custom-select-box" name="bathroom" value{{.bathroom}}>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+								</select>
+							</div>
+							
+							<!-- Form Group -->
+							<div class="form-group col-lg-12 col-md-12 col-sm-12">
+								<h2>Address</h2>
+							</div>
+							
+							<!-- Form Group -->
+							<div class="form-group col-lg-3 col-md-6 col-sm-12">
+								<label>State</label>
+								<select class="custom-select-box" name="state" value{{.state}}>		
+									<option>Abia</option>
+									<option>Adamawa</option>
+									<option>Akwa Ibom</option>
+									<option>Anambra</option>
+									<option>Bauchi</option>
+									<option>Bayelsa</option>
+									<option>Benue</option>
+									<option>Borno</option>
+									<option>Cross River</option>
+									<option>Delta</option>
+									<option>Ebonyi</option>
+									<option>Edo</option>
+									<option>Ekiti</option>
+									<option>Enugu</option>
+									<option>Gombe</option>
+									<option>Imo</option>
+									<option>Jigawa</option>
+									<option>Kaduna</option>
+									<option>Kano</option>
+									<option>Katsina</option>
+									<option>Kebbi</option>
+									<option>Kogi</option>
+									<option>Kwara</option>
+									<option>Lagos</option>
+									<option>Nasarawa</option>
+									<option>Niger</option>
+									<option>Ogun</option>
+									<option>Ondo</option>
+									<option>Osun</option>
+									<option>Oyo</option>
+									<option>Plateau</option>
+									<option>Rivers</option>
+									<option>Sokoto</option>
+									<option>Taraba</option>
+									<option>Yobe</option>
+									<option>Zamfara</option>
+								</select>
+							</div>
+							
+							<!-- Form Group -->
+							<div class="form-group col-lg-3 col-md-6 col-sm-12">
+								<label>Postal Code</label>
+								<input type="text" name="postal_code" value{{.postal_code}} placeholder="Postal Code" required>
+							</div>
+                            <!-- Form Group -->
+							<div class="form-group col-lg-6 col-md-6 col-sm-12">
+								<label>Address</label>
+								<input type="text" placeholder="Address" name="address" value{{.address}} required>
+							</div>
+							<!-- Form Group -->
+							<div class="form-group col-lg-12 col-md-12 col-sm-12">
+								<h2>Attach File</h2>
+								<label>Upload House Images</label>
+								<input type="file" name="files" multiple>
+							</div>
+							<!-- Form Group -->
+							<div class="form-group col-lg-12 col-md-12 col-sm-12">
+								<h2>features Information</h2>
+							</div>
+							
+							<div class="form-group col-lg-3 col-md-6 col-sm-12 ">
+								<div class="check-box">
+									<input type="checkbox"  id="service-1" name="features[]" value="Air Conditioning"> 
+									<label for="service-1">Air Conditioning</label>
+								</div>
+							</div>
+
+							<div class="form-group col-lg-3 col-md-6 col-sm-12 ">
+								<div class="check-box">
+									<input type="checkbox" id="service-2" name="features[]" value="Alarm System"> 
+									<label for="service-2">Alarm System</label>
+								</div>
+							</div>
+
+							<div class="form-group col-lg-3 col-md-6 col-sm-12 ">
+								<div class="check-box">
+									<input type="checkbox" id="service-3" name="features[]" value="Doorman"> 
+									<label for="service-3">Doorman</label>
+								</div>
+							</div>
+
+							<div class="form-group col-lg-3 col-md-6 col-sm-12 ">
+								<div class="check-box">
+									<input type="checkbox"  id="service-4" name="features[]" value="Fireplace"> 
+									<label for="service-4">Fireplace</label>
+								</div>
+							</div>
+
+							<div class="form-group col-lg-3 col-md-6 col-sm-12 ">
+								<div class="check-box">
+									<input type="checkbox"  id="service-5" name="features[]" value="Garden"> 
+									<label for="service-5">Garden</label>
+								</div>
+							</div>
+
+							<div class="form-group col-lg-3 col-md-6 col-sm-12 ">
+								<div class="check-box">
+									<input type="checkbox"  id="service-6" name="features[]" value="Heating System"> 
+									<label for="service-6">Heating System</label>
+								</div>
+							</div>
+
+							<div class="form-group col-lg-3 col-md-6 col-sm-12 ">
+								<div class="check-box">
+									<input type="checkbox"  id="service-7" name="features[]" value="High Ceiling"> 
+									<label for="service-7">High Ceiling</label>
+								</div>
+							</div>
+
+							<div class="form-group col-lg-3 col-md-6 col-sm-12 ">
+								<div class="check-box">
+									<input type="checkbox"  id="service-8" name="features[]" value="Car Parking"> 
+									<label for="service-8">Car Parking</label>
+								</div>
+							</div>
+
+							<div class="form-group col-lg-3 col-md-6 col-sm-12 ">
+								<div class="check-box">
+									<input type="checkbox"  id="service-9"  name="features[]" value="Swimming Pool"> 
+									<label for="service-9">Swimming Pool</label>
+								</div>
+							</div>
+
+							<div class="form-group col-lg-3 col-md-6 col-sm-12 ">
+								<div class="check-box">
+									<input type="checkbox"  id="service-10"  name="features[]" value="Laundry Room"> 
+									<label for="service-10">Laundry Room</label>
+								</div>
+							</div>
+
+							<div class="form-group col-lg-3 col-md-6 col-sm-12 ">
+								<div class="check-box">
+									<input type="checkbox"  id="service-11"  name="features[]" value="Places to seat"> 
+									<label for="service-11">Places to seat</label>
+								</div>
+							</div>
+
+							<div class="form-group col-lg-3 col-md-6 col-sm-12 ">
+								<div class="check-box">
+									<input type="checkbox"  id="service-12" name="features[]" value="Window Covering"> 
+									<label for="service-12">Window Covering</label>
+								</div>
+							</div>
+							-->

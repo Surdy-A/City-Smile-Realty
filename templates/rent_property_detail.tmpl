@@ -1,0 +1,142 @@
+{{template "header.tmpl"}}
+	<!-- Sidebar Page Container -->
+    <div class="sidebar-page-container">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+				
+				<!--Content Side-->
+
+                <div class="content-side col-lg-8 col-md-12 col-sm-12">
+					<div class="properties-detail">
+						<div class="inner-box">
+							<h1>{{.property.PropertyName}} {{.id}}</h1>
+							<div class="location">{{.property.Address}}</div>
+							<!-- Property List -->
+							<ul class="property-list">
+								<li>Price :#{{.property.Price}}</li>
+								<li>City :{{.property.City}}</li>
+								<li>Bedroom :{{.property.Bedroom}}</li>
+								<li>Bathroom :{{.property.Bathroom}}</li>
+								<li>Car Space :{{.property.CarSpace}}</li>
+								<li>State :{{.property.State}}</li>
+								<li>Category :{{.property.Category}}</li>
+								<li>Property Type :{{.property.PropertyType}}</li>
+							</ul>
+								<p><a href="https://wa.me/09017219046" class="theme-btn btn-style-one">Contact Agent</a></p>
+							<!-- Property Gallery Box -->
+							<div class="property-gallery-box">
+								
+								<div class="carousel-outer">
+									<ul class="image-carousel owl-carousel owl-theme">
+										{{range $image := .property.Images}}
+										<li><a href="assets/images/uploads/{{$image}}" class="lightbox-image" title="Image Caption Here"><img src="assets/images/uploads/{{$image}}" alt="property image"></a></li>
+										{{end}}
+									</ul>
+									
+									<ul class="thumbs-carousel owl-carousel owl-theme">
+									{{range $img := .property.Images}}
+										<li class="thumb-box">
+											<figure><img src="assets/images/resource/{{$img}}" alt=""></figure>
+											<div class="overlay"><span class="icon flaticon-dimension"></span></div>
+										</li>
+										
+									{{end}}
+									</ul>
+								</div>
+							
+							</div>
+							
+							<!-- Property Detail Box -->
+							<div class="property-detail-box">
+								<h2>Property Details.</h2>
+								<div class="text">
+									<p>{{.property.Description}}</p>
+									<ul class="property-info clearfix">
+										<li><i class="flaticon-design-tool"></i></li>
+										<li><i class="flaticon-bed"></i>{{.property.Bedroom}} Bedrooms</li>
+										<li><i class="flaticon-garage-1"></i>{{.property.CarSpace}} Garage</li>
+										<li><i class="flaticon-shower"></i>{{.property.Bathroom}} Bathroom</li>
+										<li><i class="flaticon-dimension"></i>Price: #{{.property.Price}}</li>
+										<li><i class="flaticon-gallery"></i> City: {{.property.City}}</li>
+									</ul>
+								</div>
+								
+								<!-- Property Featured Box -->
+								<div class="property-featured-box">
+									<h3>Properties Features.</h3>
+									<div class="row clearfix">
+										{{$length := len .property.Features.Features}}
+										<!-- Column -->
+										<div class="column col-lg-4 col-md-4 col-sm-12">
+											<ul class="list-style-one">
+											{{range $feature, $i := .property.Features.Features }}
+											{{if le $feature 5}}
+												<li>{{$i}}</li>
+											{{end}}
+											{{end}}
+											</ul>
+										</div>
+										<!-- Column -->
+										<div class="column col-lg-4 col-md-4 col-sm-12">
+											<ul class="list-style-one">
+											{{range $feature, $i := .property.Features.Features }}
+											{{if ge $feature 5 }}
+											{{if le $feature 10 }}
+												<li>{{$i}}</li>
+											{{end}}
+											{{end}}
+											{{end}}
+											</ul>
+										</div>
+										
+										<!-- Column -->
+										<div class="column col-lg-4 col-md-4 col-sm-12">
+											<ul class="list-style-one">
+											{{range $feature, $i := .property.Features.Features }}
+											{{if ge $feature 10 }}
+											{{if le $feature 15 }}
+												<li>{{$i}}</li>
+											{{end}}
+											{{end}}
+											{{end}}
+											</ul>
+										</div>
+										
+									</div>
+								</div>
+								<!-- Video Outer Box -->
+								<div class="video-outer-box">
+									<h3>Video View</h3>
+									<!--Video Box-->
+									<div class="video-box">
+										<div class="image">
+											<a href="{{.property.Video}}" class="lightbox-image overlay-box"><span class="flaticon-play-button"><i class="ripple"></i></span></a>
+											<img src="assets/images/background/2.jpg" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Sidebar Side-->
+                <div class="sidebar-side col-lg-4 col-md-12 col-sm-12">
+                	<aside class="sidebar sticky-top">
+						<div class="sidebar-inner">
+						<!-- Social Widget -->
+						<div class="sidebar-widget sidebar-social-widget">
+							<ul class="social-icon-two">
+								<li><a href="https://www.facebook.com/profile.php?id=100081599105741&mibextid=LQQJ4d"><span class="fab fa-facebook-f"></span></a></li>
+								<li class="twitter"><a href="https://www.tiktok.com/@hollisstarr"><span class="fab fa-twitter"></span></a></li>
+							</ul>
+						</div>
+						<!-- End Social Widget -->
+						
+						</div>
+					</aside>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+{{template "footer.tmpl"}}

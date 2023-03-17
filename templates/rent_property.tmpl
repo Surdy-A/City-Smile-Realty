@@ -1,0 +1,182 @@
+		{{template "header.tmpl" }}
+		<!-- Search Home Section -->
+	<section class="search-home-section">
+		<div class="auto-container">
+			<div class="property-search-tabs tabs-box">
+				<div class="tabs-content">
+					<!--Tab / Active Tab-->
+					<div class="sec-title centered">
+					<div class="separator"></div>
+					<h1>Houses for Rent</h1>
+				</div>
+					<div class="tab active-tab" id="sale">
+						<div class="property-search-form">
+							<form method="post" action="/rent_property">
+								<div class="row">
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+											<label>Name</label>
+										<input type="text" name="name" placeholder="Address" value="{{.name}}" required>
+									</div>
+									
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>City</label>
+										<select class="custom-select-box" name="city" value{{.city}}>
+											<option nam="city">Any</option>
+											<option nam="city">New York</option>
+											<option nam="city">Los Angeles</option>
+											<option nam="city">Chicago</option>
+											<option nam="city">Houston</option>
+										</select>
+									</div>
+
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>search by property id</label>
+										<input type="text" name="property_id" value="{{.property_id}}" placeholder="Search ID" required>
+									</div>
+
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>search by Address</label>
+										<input type="text" name="address" value="{{.address}}" placeholder="Address" required>
+									</div>
+									
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>Bedroom</label>
+										<select class="custom-select-box" name="bedroom" value="bedroom">
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+										</select>
+									</div>
+									
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>Washroom</label>
+										<select class="custom-select-box" name="washroom" value="washroom">
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+										</select>
+									</div>
+									
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>Car Space</label>
+										<select class="custom-select-box" name="carspace" value="carspace">
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+										</select>
+									</div>
+									
+									<!-- Form Group -->
+									<div class="form-group col-lg-3 col-md-6 col-sm-12">
+										<label>Servant Quarter</label>
+										<select class="custom-select-box" name="servant_quarter" value="servant_quarter">
+											<option>01</option>
+											<option>02</option>
+											<option>03</option>
+											<option>04</option>
+										</select>
+									</div>
+									
+									<!-- Form Group -->
+									<div class="form-group col-lg-6 col-md-6 col-sm-12">
+										<div class="range-slider-one clearfix">
+											<label>Price Filter</label>
+											<div class="price-range-slider"></div>
+											<div class="input"><input type="text" class="price-amount" name="price"  readonly></div>
+											<div class="title">NG Naira</div>
+										</div>
+									</div>
+
+									<!-- Form Group -->
+									<div class="form-group col-lg-12 col-md-12 col-sm-12">
+										<button type="submit" class="theme-btn btn-style-two"><span class="txt">Search Now</span></button>
+										<br />
+											<h2 class="text-center">{{.errorMessage}}</h2>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Search Home Section -->
+		<!-- Properties Page Section -->
+		<section class="properties-page-section">
+			<div class="auto-container">
+				<div class="row clearfix">
+					<!-- Property Block --->
+					{{ range .properties}}
+					{{ if eq .Status "For Rent" }}
+					<div class="property-block col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="upper-box clearfix">
+								<div class="pull-left">
+									<div class="price">#{{.Price}}</div>
+								</div>
+								<div class="pull-right">
+									<a class="read-more" href="/rent_property{{.ID}}">Read More <span
+											class="fas fa-angle-double-right"></span></a>
+								</div>
+							</div>
+							<div class="image">
+								<span class="featured">featured</span>
+								<a href="/rent_property_{{.ID}}"><img src="assets/images/uploads/{{(index .Images 0)}}" alt="" class="resize" /></a>
+								<div class="overlay-box">
+									<li>House For {{.Status}}</li>
+									<li>{{.Availability}}</li>
+								</div>
+							</div>
+							<div class="lower-content">
+								<h3><a href="/rent_property_{{.ID}}">{{.PropertyName}}</a></h3>
+								<ul class="social-icon-one">
+								<!--
+									<li><a href="https://www.facebook.com/profile.php?id=100081599105741&mibextid=LQQJ4d"><span class="fa fa-edit"></span></a></li>
+									<li><a href="/delete_property_{{.ID}}"><span class="fa fa-trash"></span></a></li>
+								-->
+								</ul>
+								<h3><a href="/rent_property_{{.ID}}">
+								<div class="text">{{.Description}}</div>
+								<ul class="property-info clearfix">
+									<li><i class="flaticon-design-tool"></i>{{.State}} State</li>
+									<li><i class="flaticon-bed"></i> {{.Bedroom}} Bedrooms</li>
+									<li><i class="flaticon-garage-1"></i> {{.CarSpace}} Garage</li>
+									<li><i class="flaticon-shower"></i> {{.Bathroom}} Bathroom</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					{{end}}
+					{{ end }}
+				</div>
+
+				<!-- Styled Pagination 
+				<div class="styled-pagination text-center">
+					<ul class="inner-container clearfix">
+						<li class="prev"><a href="#" class="active"><i class="flaticon-left-arrow"></i> Prev</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li class="active"><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li class="next"><a href="#" class="active">Next <i class="flaticon-right-arrow-1"></i></a></li>
+					</ul>
+				</div>
+				-->
+			</div>
+		</section>
+		<!-- End Team Section -->
+
+{{template "footer.tmpl"}}
+

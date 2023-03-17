@@ -1,0 +1,320 @@
+@charset "utf-8";
+/* CSS Document */
+
+a,
+.theme_color,
+.btn-style-four,
+.cat-list li a:hover,
+.main-slider .content h1,
+.search-popup .recent-searches li a:hover,
+.main-menu .navigation > li > ul > li > ul > li:hover > a,
+.main-menu .navigation > li > ul > li:hover > a,
+.main-menu .navigation > li:hover > a,
+.main-menu .navigation > li.current > a,
+.main-header .outer-box .search-box-btn .icon,
+.main-slider .swiper-button-next:before,
+.main-slider .swiper-button-prev:before,
+.sec-title .separator:after,
+.nav-outer .mobile-nav-toggler .icon,
+.mobile-menu .navigation li.current > a, .mobile-menu .navigation li > a:hover,
+.main-menu .navigation > li .mega-menu-bar .column > ul > li > a:hover,
+.sticky-header .main-menu .navigation > li:hover > a,
+.sticky-header .main-menu .navigation > li.current > a,
+.projects-block .inner-box .overlay-box h3 a:hover,
+.projects-block .inner-box .overlay-box .price,
+.property-block .inner-box .lower-content h3 a:hover,
+.team-block .lower-content h3 a:hover,
+.main-footer .footer-list li a:hover,
+.news-widget-block .widget-inner h3 a:hover,
+.main-footer .contact-list li .icon,
+.main-header .info-box .icon-box,
+.cart-product .inner h3 a:hover,
+.services-block .inner-box .icon-box,
+.services-block .inner-box h4 a:hover,
+.gallery-item .icon-box h3 a:hover,
+.testimonial-block-two .quote-icon,
+.news-block-two .inner-box .lower-content .meta span,
+.news-block-two .inner-box .lower-content .lower-box .likes a,
+.news-block-two .inner-box .lower-content .lower-box .read-more a:hover,
+.news-block-two .inner-box .lower-content h4 a:hover,
+.talk-section .content-column .inner-column .icon-box,
+.about-section .image-column .image .video-popup .video-icon,
+.main-slider-two .content-outer .content .info-box li .icon,
+.news-block .inner-box .lower-content .upper-box h4 a:hover,
+.news-block .inner-box .lower-content .post-meta li a .icon,
+.property-block .inner-box .lower-content .property-info li i,
+.sticky-header .main-menu .navigation > li.current-menu-item > a,
+.news-block .inner-box .lower-content .text .read-more,
+.footer-style-two .footer-widget .info-list li .icon,
+.header-style-three .social-box li a,
+.list-style-one li:before,
+.documents span,
+.documents a:hover,
+.video-tour-section .title-column .text-box h4,
+.property-block-two .tags li a,
+.property-block-two h5 a:hover,
+.fact-counter-two .column .inner .count-outer,
+.five-col-theme .column .inner-box .icon,
+.property-block-two .property-info li i,
+.time-counter .time-countdown .counter-column,
+.video-section .play-button .icon,
+.agent-info-list li a:hover,
+.agent-info-list li .icon,
+.recent-properties .post .location,
+.recent-properties .post:hover h3 a,
+.agent-detail .inner-box .upper-box .info-column .title,
+.time-counter .time-countdown .counter-column .count,
+.sidebar .search-box .form-group button,
+.video-box .overlay-box span,
+.error-section .error-big-text,
+.post-share-options .social-icons a:hover,
+.shop-page .basic-details .item-price,
+.shop-comment-form .rating-box .rating a:hover,
+.blog-detail .inner-box .lower-content .post-meta li .icon,
+.blog-detail .inner-box .lower-content .text blockquote .quote-icon,
+.sidebar-page-container .comments-area .comment-box .theme-btn,
+.properties-detail .inner-box .location:before,
+.properties-detail .property-detail-box .property-info li i,
+.page-title .bread-crumb a:hover, .page-title .bread-crumb a.current,
+.mixitup-gallery .filters li.active, .mixitup-gallery .filters li:hover,
+.video-tour-section .carousel-outer .thumbs-carousel .owl-next:hover,
+.video-tour-section .carousel-outer .thumbs-carousel .owl-prev:hover,
+.dashboard-section .dashboard-header .dashboard-nav li.active a,
+.dashboard-section .dashboard-header .dashboard-nav li a:hover,
+.messages-section .messages-dashboard-header .dashboard-nav li.active a,
+.messages-section .messages-dashboard-header .dashboard-nav li a:hover,
+.booking-section .booking-dashboard-header .dashboard-nav li.active a,
+.booking-section .booking-dashboard-header .dashboard-nav li a:hover,
+.news-block-three .inner-box .content-column h4 a:hover,
+.news-block-three .inner-box .content-column .post-meta li a .icon,
+.news-block-three .inner-box .content-column .text .read-more,
+.shop-item .inner-box .lower-box .upper-box h4 a:hover,
+.shop-item .inner-box .lower-box .lower-content .price,
+.cart-table tbody tr .remove-btn:hover,
+.checkout-page .default-links li a,
+.contact-page-section .info-column .content-boxed ul li .icon,
+.contact-page-section .info-column .content-boxed ul li a:hover,
+.submit-property-section .submit-property-header-section .dashboard-nav li.active a,
+.submit-property-section .submit-property-header-section .dashboard-nav li a:hover,
+.properties-detail .property-gallery-box .carousel-outer .thumbs-carousel .owl-next:hover,
+.properties-detail .property-gallery-box .carousel-outer .thumbs-carousel .owl-prev:hover,
+.error-search-box .form-group input:focus + button, .error-search-box .form-group button:hover{
+	color:#25a9e0;
+}
+
+.styled-pagination li.prev a:hover, .styled-pagination li.next a:hover{
+	color:#25a9e0 !important;
+}
+
+/*Background Color*/
+
+.btn-style-two,
+.phone-btn .icon,
+.phone-btn:hover,
+.scroll-to-top:hover,
+.sidebar-title h4,
+.message-box .btn-box a:hover,
+.sidebar .popular-tags a:hover,
+.about-school .inner .text span:after,
+.blog-detail .inner-box .image .date-box,
+.shop-item .inner-box .off-price,
+.shop-item .inner-box .image-box,
+.shop-item .inner-box .lower-box .lower-content .cart-btn,
+.search-popup .search-form fieldset input[type="submit"],
+.search-popup .search-form fieldset input[type="submit"]:hover,
+.main-header .header-top,
+.message-box .thumb-box .reply-btn:hover,
+.testimonial-block-two h3:before,
+.gallery-item .icon-box .link:hover .icon,
+.main-footer .footer-bottom,
+.post-share-options .tags a:hover,
+.projects-block .inner-box .overlay-box .category,
+.main-slider .swiper-button-next:hover,
+.main-slider .swiper-button-prev:hover,
+.call-to-action-section h2:before,
+.header-style-three .social-box li a:hover,
+.property-search-tabs .tab-buttons .tab-btn:hover,
+.property-search-tabs .tab-buttons .tab-btn.active-btn,
+.ui-state-active, .ui-widget-content .ui-state-active,
+.property-block .inner-box .upper-box:before,
+.property-block .inner-box .image .overlay-box li,
+.property-block .inner-box .image .featured,
+.news-block .inner-box .image,
+.video-tour-section .thumbs-carousel .thumb-box .overlay:before,
+.property-block-two .image-box .featured,
+.services-block .inner-box .border-one:before,
+.services-block .inner-box .border-one:after,
+.services-block .inner-box .border-two:before,
+.services-block .inner-box .border-two:after,
+.news-block .inner-box .lower-content .date-box,
+.main-footer .logo-widget .social-icons li a:hover,
+.main-header.header-style-two .header-lower,
+.properties-detail .property-gallery-box .thumbs-carousel .thumb-box .overlay:before,
+.sidebar-info-contents .content-inner .social-box li a:hover,
+.main-slider-two .content-outer .content .title,
+.fact-counter .countbox-outer .inner:before,
+.newsletter-section:before,
+.social-icon-one li a:hover,
+.call-to-action,
+.recent-properties .post-thumb .status,
+.footer-style-two .footer-widget h4:before,
+.about-section .image-column .image .video-popup:before,
+.about-section .image-column .image .video-popup:after,
+.news-block .inner-box .lower-content .upper-box .separator:before,
+.property-search-form .range-slider-one .ui-slider .ui-slider-range,
+.main-footer .footer-widget .footer-title .separator:after,
+.header-style-three .main-menu .navigation > li.current > a,
+.header-style-three .main-menu .navigation > li:hover > a,
+.calender-block .inner-box .time-boxed .time:before,
+.calender-block .inner-box .days-boxed .day-date,
+.property-block-two .image-box .for,
+.property-block-two .property-price .read-more,
+.comming-soon .emailed-form .form-group input[type="submit"],
+.comming-soon .emailed-form button,
+.accordion-box .block .icon-outer .icon,
+.property-widget-tabs .property-tabs .tab-btns .tab-btn:hover,
+.property-widget-tabs .property-tabs .tab-btns .tab-btn.active-btn,
+.fluid-section-one .content-column .property-tabs .tab-buttons .tab-btn:hover,
+.fluid-section-one .content-column .property-tabs .tab-buttons .tab-btn.active-btn,
+.styled-pagination li.next a:hover, .styled-pagination li.prev a:hover,
+.styled-pagination li a:hover, .styled-pagination li.active a,
+.check-box input[type="checkbox"]:checked + label:before,
+.news-block-three .inner-box .image-column .image,
+.news-block-three .inner-box .image-column .image .date-box,
+.comments-tab .tab-buttons .tab-btn:hover, .comments-tab .tab-buttons .tab-btn.active-btn{
+	background-color:#25a9e0;
+}
+
+/*Border Color*/
+
+.phone-btn,
+.btn-style-one:hover,
+.search-popup .recent-searches li a:hover,
+.main-menu .navigation > li > ul > li > a:after,
+.btn-style-one,
+.dropzone-design:hover,
+.error-search-box .form-group input:focus,
+.check-box input[type="checkbox"]:checked + label,
+.check-box input[type="checkbox"]:checked + label:before,
+.main-slider .swiper-button-next,
+.main-slider .swiper-button-prev,
+.gallery-item .icon-box .link:hover .icon,
+.ui-state-active, .ui-widget-content .ui-state-active,
+.property-search-form .form-group input:focus,
+.property-search-form .form-group select:focus,
+.property-search-form .form-group textarea:focus,
+.property-search-form .range-slider-one .ui-state-default,
+.clients-section .sponsors-outer .image-box:hover,
+.main-footer .logo-widget .social-icons li a:hover,
+.talk-section .content-column .inner-column .icon-box,
+.testimonial-block-two .inner-box,
+.styled-pagination .inner-container,
+.styled-form input:focus, .styled-form select:focus, .styled-form textarea:focus,
+.shop-form input:focus, .shop-form select:focus, .shop-form textarea:focus,
+.about-section .image-column .image .video-popup .video-icon,
+.fluid-section-one .content-column .property-tabs .tab-buttons .tab-btn:hover,
+.fluid-section-one .content-column .property-tabs .tab-buttons .tab-btn.active-btn,
+.property-search-form .range-slider-one .ui-widget-content .ui-state-default,
+.default-form .form-group input[type="text"]:focus,
+.default-form .form-group input[type="password"]:focus,
+.default-form .form-group input[type="tel"]:focus,
+.default-form .form-group input[type="email"]:focus,
+.default-form .form-group select:focus,
+.time-counter .time-countdown .counter-column,
+.default-form .form-group textarea:focus,
+.comment-form .form-group input[type="text"]:focus,
+.comment-form .form-group input[type="password"]:focus,
+.comment-form .form-group input[type="tel"]:focus,
+.comment-form .form-group input[type="email"]:focus,
+.comment-form .form-group select:focus,
+.comment-form .form-group textarea:focus,
+.shop-comment-form .form-group input[type="text"]:focus,
+.shop-comment-form .form-group input[type="password"]:focus,
+.shop-comment-form .form-group input[type="tel"]:focus,
+.shop-comment-form .form-group input[type="email"]:focus,
+.shop-comment-form .form-group select:focus,
+.shop-comment-form .form-group textarea:focus,
+.contact-form .form-group input[type="text"]:focus,
+.contact-form .form-group input[type="password"]:focus,
+.contact-form .form-group input[type="tel"]:focus,
+.contact-form .form-group input[type="email"]:focus,
+.contact-form .form-group select:focus,
+.contact-form .form-group textarea:focus{
+	border-color:#25a9e0;
+}
+
+.register-section .form-box:before,
+.register-section .form-box{
+	border-color:rgba(37,169,224,0.70);
+}
+
+.btn-style-one:before{
+	border-bottom-color:#25a9e0;
+}
+
+.btn-style-one:after{
+	border-bottom-color:#25a9e0;
+}
+
+.property-block-two .image-box .featured:before{
+	border-top-color:#25a9e0;
+}
+
+.property-block .inner-box .image:before,
+.news-block-two .inner-box .image-box:before{
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(37,169,224,0.7) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(37,169,224,0.7) 100%);
+}
+
+.team-block .image .overlay-box:before{
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, #25a9e0 100%);
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, #25a9e0 100%);
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0) 0%, #25a9e0 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255,255,255,0)), color-stop(100, #25a9e0));
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, #25a9e0 100%);
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #25a9e0 100%);
+}
+
+.fact-counter-two .column .inner:after,
+.five-col-theme .column:after,
+.footer-style-two .footer-widget:before{
+	background:-webkit-linear-gradient(top,rgba(0,0,0,0),#25a9e0,rgba(0,0,0,0));
+	background:-moz-linear-gradient(top,rgba(0,0,0,0),#25a9e0,rgba(0,0,0,0));
+	background:-ms-linear-gradient(top,rgba(0,0,0,0),#25a9e0,rgba(0,0,0,0));
+	background:-o-linear-gradient(top,rgba(0,0,0,0),#25a9e0,rgba(0,0,0,0));
+}
+
+/*RGBA Color Light*/
+
+.calender-block .inner-box .more-boxed .more{
+	background-color:rgba(37,169,224,0.70);
+}
+
+/*RGBA Color Dark*/
+
+@media only screen and (max-width: 767px){
+	
+	.main-menu .navbar-header .navbar-toggle{
+		border-color:#25a9e0;
+	}
+	
+	.main-menu .navbar-header .navbar-toggle,
+	.main-menu .navbar-collapse > .navigation,
+	.main-menu .navbar-collapse > .navigation > li > ul,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > ul,
+	.main-menu .navbar-collapse > .navigation > li > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > ul > li > a,
+	.main-menu .navbar-collapse > .navigation > li > a:hover,
+	.main-menu .navbar-collapse > .navigation > li > a:active,
+	.main-menu .navbar-collapse > .navigation > li > a:focus,
+	.main-menu .navbar-collapse > .navigation > li:hover > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li:hover > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > ul > li:hover > a,
+	.main-menu .navbar-collapse > .navigation > li.current > a,
+	.main-menu .navbar-collapse > .navigation > li.current-menu-item > a,
+	.header-style-two.inner-header .main-menu .navigation > li > a{
+		background-color:#25a9e0;
+	}
+	
+}
