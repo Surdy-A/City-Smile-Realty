@@ -1,7 +1,66 @@
-## About the project
+<h1 align="center"> City Smile Realty Web Application </h1> <br>
 
-#City Smile Realty
+
+
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Quickstart](#quick-start)
+- [Screenshot](#documentation)
+
+
+
+
+## Introduction
+
 City Smile Realty: Is a Real Estate Market Place. You can Search millions of for-sale and rental listings.
+
+
+## Features
+Here are some of the features:
+- Add Property for rent and sale
+- Delete Property
+- Edit Property
+
+## Technology Used
+- Golang
+- Gonic Gin
+- CSS
+- Javascript
+- HTML
+
+## Running the App
+Perform the following steps to run the application:
+
+1- Clone the App
+
+```
+git clone https://github.com/Surdy-A/City-Smile-Realty.git
+``` 
+
+2- Change directory into the City-Smile-Realty and run
+
+```
+go run main.go
+``` 
+``` 
+
+3- Change directory into the order-service and run
+
+```
+docker-compose up -d
+```
+Finally, 
+
+4- Change directory into the payment-service and run
+
+```
+docker-compose up -d
+``` 
+wait for all services to be up. It takes few seconds)
 
 ### Layout
 ```tree
@@ -26,20 +85,7 @@ City Smile Realty: Is a Real Estate Market Place. You can Search millions of for
 │   ├── template
 └── vendor
     └── README.md
-
-```
-## Run the project
-
-```
-$ git clone https://github.com/Surdy-A/City-Smile-Realty.git
-$ cd City-Smile-Realty
-```
-https://go.googlesource.com/example is the canonical Git repository.
-It is mirrored at https://github.com/golang/example.
-## [hello](hello/) and [stringutil](stringutil/)
-
-```
-$ cd hello
-$ go build
-```
-A trivial "Hello, world" program that uses a stringutil package.
+    
+## Screenshot
+https://documenter.getpostman.com/view/11352997/UzBtnPbv
+## About the project
