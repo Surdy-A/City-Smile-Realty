@@ -7,9 +7,9 @@
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Requirements](#Technology Used)
-- [Quickstart](#Running the Application)
-- [Screenshot](#Layout)
+- [Technology](#Technology-Used)
+- [Running the Application](#Running-the-Application)
+- [Layout](#Layout)
 
 
 
