@@ -71,7 +71,3 @@ go run main.go
 ├── utils
 │   ├── util.go
 └── |
-    
-## Screenshot
-#Home Page
-![screen1](https://user-images.githubusercontent.com/49990138/229051317-18778eac-e25f-4fe1-b9cc-722cd296650e.png)
