@@ -80,4 +80,9 @@ go run main.go
 ![alt text](https://github.com/Surdy-A/City-Smile-Realty/blob/master/assets/images/screenshot/screen2.png)
 
 ![Screenshot](screen1.png)
+
+<p align="center">
+  <img src="https://github.com/Surdy-A/City-Smile-Realty/blob/master/assets/images/screenshot/screen1.png" width="350" title="hover text">
+  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+</p>
 ## About the project
