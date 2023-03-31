@@ -47,21 +47,6 @@ git clone https://github.com/Surdy-A/City-Smile-Realty.git
 go run main.go
 ``` 
 ``` 
-
-3- Change directory into the order-service and run
-
-```
-docker-compose up -d
-```
-Finally, 
-
-4- Change directory into the payment-service and run
-
-```
-docker-compose up -d
-``` 
-wait for all services to be up. It takes few seconds)
-
 ### Layout
 ```tree
 ├── .github
