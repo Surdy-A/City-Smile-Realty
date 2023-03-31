@@ -74,15 +74,4 @@ go run main.go
     
 ## Screenshot
 #Home Page
-![alt text](https://github.com/Surdy-A/City-Smile-Realty/blob/master/assets/images/screenshot/screen1.png?raw=true)
-
-#House List for Rent
-![alt text](https://github.com/Surdy-A/City-Smile-Realty/blob/master/assets/images/screenshot/screen2.png)
-
-![Screenshot](screen1.png)
-
-<p align="center">
-  <img src="https://github.com/Surdy-A/City-Smile-Realty/blob/master/assets/images/screenshot/screen1.png" width="350" title="hover text">
-  <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
-</p>
-## About the project
+![screen1](https://user-images.githubusercontent.com/49990138/229051317-18778eac-e25f-4fe1-b9cc-722cd296650e.png)
