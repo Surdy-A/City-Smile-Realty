@@ -46,12 +46,10 @@ git clone https://github.com/Surdy-A/City-Smile-Realty.git
 ```
 go run main.go
 ``` 
-``` 
-### Layout
+
+## Layout
+
 ```tree
-├── .github
-│   ├── ISSUE_TEMPLATE.md
-│   └── PULL_REQUEST_TEMPLATE.md
 ├── .gitignore
 ├── README.md
 ├── assets
@@ -68,9 +66,12 @@ go run main.go
 │   └── house.go
 ├── templates
 │   ├── template
-└── vendor
-    └── README.md
+├── Uploads
+│   ├── upload
+├── utils
+│   ├── util.go
+└── |
     
 ## Screenshot
-https://documenter.getpostman.com/view/11352997/UzBtnPbv
+![alt text]()
 ## About the project
