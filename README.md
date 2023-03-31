@@ -73,5 +73,10 @@ go run main.go
 └── |
     
 ## Screenshot
-![alt text]()
+#Home Page
+![alt text](https://github.com/Surdy-A/City-Smile-Realty/blob/master/assets/images/screenshot/screen1.png)
+
+#House List for Rent
+![alt text](https://github.com/Surdy-A/City-Smile-Realty/blob/master/assets/images/screenshot/screen2.png)
+
 ## About the project
