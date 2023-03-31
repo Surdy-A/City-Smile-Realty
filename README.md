@@ -8,7 +8,7 @@
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technology](#Technology-Used)
-- [Running the Application](#Running-the-Application)
+- [Running](#Running-the-application)
 - [Layout](#Layout)
 
 
